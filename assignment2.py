@@ -1,30 +1,26 @@
-Name = input("Full name: ")
-print(Name)
-Age = int(input("Current age: "))
-if Age >= 15:
-    print("Eligible")
-    Location = input("Location: ")
-    print(Location)
-    Phonenumber = int(input("Phonenumber: "))
-    if Phonenumber == 10:
-        print("valid")
-        Track = input("Track: ")
-        Tracks = ["python","javascript"]
-        if Track not in Tracks:
-            print("not eligible for CSE")
-        else:   
-            Cohort = input("Cohort intake: ")
-            if Cohort == "june intake":
-                print("Available")
-            else:
-                print("Intake not available")
-    else:
-        print("Not valid")
+# Ask user for details
+
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+location = input("Enter your location: ")
+phone = input("Enter your phone number: ")
+track = input("Enter your track (Python or JavaScript): ")
+cohort = input("Enter your cohort intake: ")
+
+# Check eligibility
+
+if age < 15:
+    print("Not eligible for the course")
+
+elif track.lower() not in ["python", "javascript"]:
+    print("Wrong course please try again ")
+
 else:
-    print("Not eligible any programme")
-    
-
-
-
-
-
+    print("\n===== STUDENT DETAILS =====")
+    print("Name:", name)
+    print("Age:", age)
+    print("Location:", location)
+    print("Phone Number:", phone)
+    print("Track:", track)
+    print("Cohort Intake:", cohort)
+    print("Eligible for the course")
