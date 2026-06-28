@@ -19,3 +19,20 @@ else:
 
 cohort_intake = input("Which cohort are you?")
 
+#create a function that accept input.
+#with atleast 2 examples for each explain in the simplest way possible all operators (its definition, examples and examples for each)
+
+#example1 
+#In this example, this function is a block of code shown by collon(:). I have the input of type int as the operand, = signs are the operator
+def multiplication():
+    num1= int(input("First value:")) 
+    num2= int(input("Second Value:"))
+    print(num1 * num2)
+multiplication()
+
+#Example 2
+#In this example, the function is odd number, = is the assignment operator
+def oddNumber():
+    num1 = int(input("Numbers:"))
+oddNumber()
+
