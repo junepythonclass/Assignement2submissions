@@ -1,61 +1,59 @@
-print("=== student Registration  ===")
+def register_student():
+    # Collecting user input
+    name = input("Enter your name: ")
+    age = int(input("Enter your age: "))
+    location = input("Enter your location: ")
+    phone = input("Enter your phone number: ")
+    track = input("Enter your track (python/javascript): ").lower()
+    cohort = input("Enter your cohort intake: ")
 
-name = input("Enter your name: ")
-age = input("Enter your age: ")
-location = input("Enter your location: ")
-phone_number = input("Enter your phone number: ")
-track = input("Enter your track: ")
-cohort_intake = input("Enter your cohort intake: ")
+    # Validation logic
+    if age < 15:
+        print("Not eligible for the course: You must be at least 15 years old.")
+    elif track != "python" and track != "javascript":
+        print("Not eligible for CSE: Track must be either 'python' or 'javascript'.")
+    else:
+        print("\n--- Registration Successful ---")
+        print(f"Name: {name}")
+        print(f"Age: {age}")
+        print(f"Location: {location}")
+        print(f"Phone: {phone}")
+        print(f"Track: {track.capitalize()}")
+        print(f"Cohort: {cohort}")
+        If you are running the program, here is a clean block of sample inputs you can copy and paste one by one to see h
 
-print("\n=== Registration Summary ===")
-print(f"Name: {name}")
-print(f"Age: {age}")
-print(f"Location: {location}")
-print(f"Phone Number: {phone_number}")
-print(f"Track: {track}")
-print(f"Cohort Intake: {cohort_intake}")
-print("Registration complete!")
+### Scenario: Successful Registration
+Copy these values into the console when prompted by the program:
 
+| Prompt | Sample Input |
+| :--- | :--- |
+| **Enter your name:** | Sarah Jenkins |
+| **Enter your age:** | 22 |
+| **Enter your location:** | Nairobi |
+| **Enter your phone number:** | +254700000000 |
+| **Enter your track (python/javascript):** | javascript |
+| **Enter your cohort intake:** | 2024-B |
 
+***
 
+### Scenario: Age Restriction Trigger
+| Prompt | Sample Input |
+| :--- | :--- |
+| **Enter your name:** | Sam Junior |
+| **Enter your age:** | 14 |
+| **Enter your location:** | Lagos |
+| **Enter your phone number:** | 08012345678 |
+| **Enter your track (python/javascript):** | python |
+| **Enter your cohort intake:** | 2024-A |
 
-print("=== CSE Eligibility Check ===")
+***
 
-name = input("Enter your name: ")
-age = int(input("Enter your age: "))  # int() converts text to number
-track = input("Enter your track (python/javascript): ").lower()  # .lower() makes it case-insensitive
-
-
-allowed_tracks = ["python", "javascript"]
-
-if age < 18:
-    print(f"Sorry {name}, you are not eligible for the course. Minimum age is 18.")
-elif track not in allowed_tracks:
-    print(f"Sorry {name}, you are not eligible for CSE. Track must be Python or Javascript.")
-else:
-    print(f"Congrats {name}! You are eligible for CSE in the {track} track.")
-print("Check complete.")
-
-
-
-
-
-
-print("=== CSE Eligibility Check ===")
-
-name = input("Enter your name: ")
-age = int(input("Enter your age: "))  # int() converts text to number
-track = input("Enter your track (python/javascript): ").lower()  # .lower() makes it case-insensitive
-
-
-allowed_tracks = ["python", "javascript"]
-
-if age < 18:
-    print(f"Sorry {name}, you are not eligible for the course. Minimum age is 18.")
-elif track not in allowed_tracks:
-    print(f"Sorry {name}, you are not eligible for CSE. Track must be Python or Javascript.")
-else:
-    print(f"Congrats {name}! You are eligible for CSE in the {track} track.")
-print("Check complete.")
-
-
+### Scenario: Invalid Track Trigger
+| Prompt | Sample Input |
+| :--- | :--- |
+| **Enter your name:** | Mark Doe |
+| **Enter your age:** | 25 |
+| **Enter your location:** | Cape Town |
+| **Enter your phone number:** | 0210000000 |
+| **Enter your track (python/javascript):** | java |
+| **Enter your cohort intake:** | 202
